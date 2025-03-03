@@ -8,7 +8,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About Laravel 11
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -65,3 +65,48 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Documentation
+
+See Module Documentation Laravel 11 MVC to HMVC
+https://laravelmodules.com/docs/v11/installation-and-setup
+
+
+
+## Setting Configuration
+
+1. Setting Composer Json
+
+   ```json
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        },
+        "merge-plugin": {
+            "include": [
+                "app/Modules/*/composer.json"
+            ]
+        }
+    }
+    ```
+
+
+
+2. Setting config/modules.php
+    Change modules
+    
+    ```php
+    'modules' => base_path('Modules'),
+
+    To
+
+    'modules' => base_path('app/Modules'),
+    ```
+
+
+## Usage
+1. Type in terminal php artisan module:make Home
+2. Type in composer dump-autoload       
+
+
